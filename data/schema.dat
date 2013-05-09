@@ -1,0 +1,7 @@
+CREATE TABLE "movie" (id integer primary_key, title text, year char(4), nom int, won int, directed_by text,
+running_time text, screenplay_by text, produced_by text, starring text, music_by, cinematography text,
+editing_by, distributed_by text, release_dates text, story_by text, studio text, country text, language text, budget text, box_office text,
+url text, key text, best_pic char(1), best_actor char(1), best_cinemato char(1), best_director char(1), best_foreign char(1), palme char(1), goldenbear char(1), goldenlion char(1));
+CREATE TABLE movie_wiki (id integer primary_key, wiki text, wikidump text, url text, key text, intro text, plot text, imdb_url text);
+CREATE TABLE imdbtop (rank integer, rating double, title text, year int, votes int, url text);
+CREATE TABLE movies_seen (url text, seen char(1), rating int, comments text);
