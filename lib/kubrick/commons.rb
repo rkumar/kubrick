@@ -3,7 +3,7 @@
 #  Description: common CLI app routines that I will use
 #       Author: rkumar http://github.com/rkumar/rbcurse/
 #         Date: 2013-04-21 - 13:10
-#  Last update: 2013-04-21 13:37
+#  Last update: 2013-04-21 13:45
 #      License: Same as Ruby's License (http://www.ruby-lang.org/LICENSE.txt)
 # ----------------------------------------------------------------------------- #
 #
@@ -132,8 +132,8 @@ def padview what, config={}, &block
 
   # maintain a stack of rowids so we can backspace through them
   #@file_stack << fn unless @file_stack.include? fn
-  fn = rowid
-  $visited_files << fn unless $visited_files.include? fn
+  fn = 0
+  #$visited_files << fn unless $visited_files.include? fn
 
   listconfig = config[:listconfig] || {}
   #listconfig[:list] = list
@@ -144,7 +144,7 @@ def padview what, config={}, &block
   listconfig.delete(:row); 
   listconfig.delete(:col); 
   #listconfig[:filename] = filename
-  listconfig[:title] = filename
+  #listconfig[:title] = filename
   listconfig[:row] = 0
   listconfig[:col] = 0
   lb = RubyCurses::TextPad.new form, listconfig, &block
